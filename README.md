@@ -1,3 +1,5 @@
+blood bank management system alongside a featureful donors web app. Created as a final year project for my computer science license.
+
 ## Used libraries
 
 - nodejs 19.5
