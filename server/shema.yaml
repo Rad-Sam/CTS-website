@@ -1,0 +1,5522 @@
+version: 1
+directus: 10.1.0
+vendor: postgres
+collections:
+  - collection: activities
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: activities
+      color: '#FFA439'
+      display_template: null
+      group: null
+      hidden: false
+      icon: pending_actions
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: 4
+      sort_field: null
+      translations: null
+      unarchive_value: null
+  - collection: appointment
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: appointment
+      color: '#E35169'
+      display_template: null
+      group: activities
+      hidden: false
+      icon: calendar_month
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: 1
+      sort_field: null
+      translations: null
+      unarchive_value: null
+    schema:
+      name: appointment
+  - collection: blood_bank
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: blood_bank
+      color: '#E35169'
+      display_template: null
+      group: null
+      hidden: false
+      icon: water_drop
+      item_duplication_fields:
+        - Notes
+        - Quantity
+        - abo
+        - date_created
+        - donor
+        - expire
+        - hospital
+        - type
+        - user_created
+      note: null
+      singleton: false
+      sort: 2
+      sort_field: null
+      translations: null
+      unarchive_value: null
+    schema:
+      name: blood_bank
+  - collection: contact_us
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: contact_us
+      color: '#6644FF'
+      display_template: null
+      group: null
+      hidden: false
+      icon: mail
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: 9
+      sort_field: null
+      translations: null
+      unarchive_value: null
+    schema:
+      name: contact_us
+  - collection: donors
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: donors
+      color: '#2ECDA7'
+      display_template: null
+      group: people
+      hidden: false
+      icon: favorite
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: 1
+      sort_field: null
+      translations: null
+      unarchive_value: null
+    schema:
+      name: donors
+  - collection: donors_files
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: donors_files
+      color: null
+      display_template: null
+      group: null
+      hidden: true
+      icon: import_export
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: 6
+      sort_field: null
+      translations: null
+      unarchive_value: null
+    schema:
+      name: donors_files
+  - collection: faq
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: faq
+      color: '#A2B5CD'
+      display_template: null
+      group: landing_page
+      hidden: false
+      icon: help
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: 3
+      sort_field: null
+      translations: null
+      unarchive_value: null
+    schema:
+      name: faq
+  - collection: global
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: global
+      color: '#2ECDA7'
+      display_template: null
+      group: landing_page
+      hidden: false
+      icon: settings
+      item_duplication_fields: null
+      note: null
+      singleton: true
+      sort: 1
+      sort_field: null
+      translations: null
+      unarchive_value: null
+    schema:
+      name: global
+  - collection: hospitals
+    meta:
+      accountability: all
+      archive_app_filter: false
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: hospitals
+      color: '#18222F'
+      display_template: null
+      group: null
+      hidden: false
+      icon: local_hospital
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: 3
+      sort_field: null
+      translations: null
+      unarchive_value: null
+    schema:
+      name: hospitals
+  - collection: landing_page
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: landing_page
+      color: null
+      display_template: null
+      group: null
+      hidden: false
+      icon: globe_uk
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: 1
+      sort_field: null
+      translations: null
+      unarchive_value: null
+  - collection: need_blood
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: need_blood
+      color: '#E35169'
+      display_template: null
+      group: activities
+      hidden: false
+      icon: health_metrics
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: 3
+      sort_field: null
+      translations: null
+      unarchive_value: null
+    schema:
+      name: need_blood
+  - collection: news
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: news
+      color: null
+      display_template: null
+      group: landing_page
+      hidden: false
+      icon: newspaper
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: 2
+      sort_field: null
+      translations: null
+      unarchive_value: null
+    schema:
+      name: news
+  - collection: patients
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: patients
+      color: '#E35169'
+      display_template: null
+      group: people
+      hidden: false
+      icon: personal_injury
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: 2
+      sort_field: null
+      translations: null
+      unarchive_value: null
+    schema:
+      name: patients
+  - collection: patients_files
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: patients_files
+      color: null
+      display_template: null
+      group: null
+      hidden: true
+      icon: import_export
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: 7
+      sort_field: null
+      translations: null
+      unarchive_value: null
+    schema:
+      name: patients_files
+  - collection: people
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: people
+      color: '#A2B5CD'
+      display_template: null
+      group: null
+      hidden: false
+      icon: supervised_user_circle
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: 5
+      sort_field: null
+      translations: null
+      unarchive_value: null
+  - collection: transfusion
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: transfusion
+      color: '#E35169'
+      display_template: null
+      group: activities
+      hidden: false
+      icon: bloodtype
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: 2
+      sort_field: null
+      translations: null
+      unarchive_value: null
+    schema:
+      name: transfusion
+  - collection: transfusion_files
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: transfusion_files
+      color: null
+      display_template: null
+      group: null
+      hidden: true
+      icon: import_export
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: 8
+      sort_field: null
+      translations: null
+      unarchive_value: null
+    schema:
+      name: transfusion_files
+fields:
+  - collection: appointment
+    field: appointment_date
+    type: date
+    meta:
+      collection: appointment
+      conditions: null
+      display: null
+      display_options: null
+      field: appointment_date
+      group: null
+      hidden: false
+      interface: datetime
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: appointment_date
+      table: appointment
+      data_type: date
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: appointment
+    field: date_created
+    type: timestamp
+    meta:
+      collection: appointment
+      conditions: null
+      display: datetime
+      display_options:
+        relative: true
+      field: date_created
+      group: null
+      hidden: true
+      interface: datetime
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: null
+      special:
+        - date-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: date_created
+      table: appointment
+      data_type: timestamp with time zone
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: appointment
+    field: donor
+    type: integer
+    meta:
+      collection: appointment
+      conditions: null
+      display: related-values
+      display_options:
+        template: '{{id}} {{first_name}} {{last_name}} ( {{ABO}} )'
+      field: donor
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        enableSelect: true
+        template: '{{id}} {{first_name}}{{last_name}} ( {{ABO}} ) '
+      readonly: false
+      required: false
+      sort: null
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: donor
+      table: appointment
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: donors
+      foreign_key_column: id
+  - collection: appointment
+    field: hospital
+    type: integer
+    meta:
+      collection: appointment
+      conditions: null
+      display: related-values
+      display_options:
+        template: '{{type}} {{name}} {{wilaya}}'
+      field: hospital
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        enableSelect: true
+        template: '{{type}} {{name}} {{wilaya}}'
+      readonly: false
+      required: false
+      sort: null
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: hospital
+      table: appointment
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: hospitals
+      foreign_key_column: id
+  - collection: appointment
+    field: id
+    type: integer
+    meta:
+      collection: appointment
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: appointment
+      data_type: integer
+      default_value: nextval('appointment_id_seq'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: appointment
+    field: status
+    type: string
+    meta:
+      collection: appointment
+      conditions: null
+      display: formatted-value
+      display_options:
+        border: true
+        conditionalFormatting:
+          - operator: eq
+            value: done
+            color: '#2ECDA7'
+            icon: done
+          - operator: eq
+            value: canceled
+            color: '#A2B5CD'
+            icon: close
+          - operator: eq
+            value: pending
+            color: '#FFC23B'
+            background: null
+            icon: nest_clock_farsight_analog
+      field: status
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: done
+            value: done
+          - text: canceled
+            value: canceled
+          - text: pending
+            value: pending
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: status
+      table: appointment
+      data_type: character varying
+      default_value: done
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: appointment
+    field: user_created
+    type: uuid
+    meta:
+      collection: appointment
+      conditions: null
+      display: user
+      display_options: null
+      field: user_created
+      group: null
+      hidden: true
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        template: '{{avatar.$thumbnail}} {{first_name}} {{last_name}}'
+      readonly: true
+      required: false
+      sort: null
+      special:
+        - user-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: user_created
+      table: appointment
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_users
+      foreign_key_column: id
+  - collection: blood_bank
+    field: Notes
+    type: text
+    meta:
+      collection: blood_bank
+      conditions: null
+      display: null
+      display_options: null
+      field: Notes
+      group: null
+      hidden: false
+      interface: input-multiline
+      note: null
+      options:
+        placeholder: special notes about the donation ..
+      readonly: false
+      required: false
+      sort: 12
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: Notes
+      table: blood_bank
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: blood_bank
+    field: Quantity
+    type: integer
+    meta:
+      collection: blood_bank
+      conditions: null
+      display: formatted-value
+      display_options:
+        bold: true
+        border: true
+        color: '#A2B5CD'
+        icon: science
+        prefix: null
+        suffix: ' CC'
+      field: Quantity
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options:
+        iconLeft: science
+        min: 0
+        placeholder: quantity in cc ( mm )
+      readonly: false
+      required: true
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: Quantity
+      table: blood_bank
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: blood_bank
+    field: abo
+    type: string
+    meta:
+      collection: blood_bank
+      conditions: null
+      display: formatted-value
+      display_options:
+        border: true
+        color: '#2ECDA7'
+        conditionalFormatting:
+          - operator: contains
+            value: '-'
+            color: '#E35169'
+      field: abo
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: A+
+            value: A+
+          - text: B+
+            value: B+
+          - text: O+
+            value: O+
+          - text: AB+
+            value: AB+
+          - text: A-
+            value: A-
+          - text: B-
+            value: B-
+          - text: O-
+            value: O-
+          - text: AB-
+            value: AB-
+      readonly: false
+      required: true
+      sort: 8
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: abo
+      table: blood_bank
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: blood_bank
+    field: available
+    type: boolean
+    meta:
+      collection: blood_bank
+      conditions: null
+      display: boolean
+      display_options:
+        colorOff: '#E35169'
+        colorOn: '#2ECDA7'
+        labelOff: Used
+        labelOn: Not Used
+      field: available
+      group: null
+      hidden: false
+      interface: boolean
+      note: null
+      options:
+        colorOff: '#E35169'
+        colorOn: '#2ECDA7'
+        label: available
+      readonly: false
+      required: true
+      sort: 10
+      special:
+        - cast-boolean
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: available
+      table: blood_bank
+      data_type: boolean
+      default_value: true
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: blood_bank
+    field: date_created
+    type: timestamp
+    meta:
+      collection: blood_bank
+      conditions: null
+      display: datetime
+      display_options:
+        relative: false
+      field: date_created
+      group: null
+      hidden: true
+      interface: datetime
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 3
+      special:
+        - date-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: date_created
+      table: blood_bank
+      data_type: timestamp with time zone
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: blood_bank
+    field: donor
+    type: integer
+    meta:
+      collection: blood_bank
+      conditions: null
+      display: related-values
+      display_options:
+        template: '{{id}} - {{first_name}} {{last_name}} ( {{ABO}} )'
+      field: donor
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        enableCreate: true
+        enableSelect: true
+        filter:
+          _and:
+            - status:
+                _eq: approved
+        template: '{{id}} - {{first_name}} {{last_name}} ( {{ABO}} )'
+      readonly: false
+      required: true
+      sort: 9
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: donor
+      table: blood_bank
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: donors
+      foreign_key_column: id
+  - collection: blood_bank
+    field: expire
+    type: date
+    meta:
+      collection: blood_bank
+      conditions: null
+      display: datetime
+      display_options:
+        relative: true
+        suffix: true
+      field: expire
+      group: null
+      hidden: false
+      interface: datetime
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: 7
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: expire
+      table: blood_bank
+      data_type: date
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: blood_bank
+    field: hospital
+    type: integer
+    meta:
+      collection: blood_bank
+      conditions: null
+      display: null
+      display_options: null
+      field: hospital
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        enableCreate: false
+        enableSelect: true
+        template: '{{id}} {{type}} {{name}}'
+      readonly: false
+      required: true
+      sort: 4
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: hospital
+      table: blood_bank
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: hospitals
+      foreign_key_column: id
+  - collection: blood_bank
+    field: id
+    type: integer
+    meta:
+      collection: blood_bank
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: blood_bank
+      data_type: integer
+      default_value: nextval('blood_bank_id_seq'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: blood_bank
+    field: transfusion
+    type: integer
+    meta:
+      collection: blood_bank
+      conditions: null
+      display: related-values
+      display_options:
+        template: '{{id}} - {{patient.first_name}} {{patient.last_name}}'
+      field: transfusion
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        enableSelect: true
+        template: '{{id}} {{patient.first_name}} {{patient.last_name}}'
+      readonly: false
+      required: false
+      sort: 11
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: transfusion
+      table: blood_bank
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: transfusion
+      foreign_key_column: id
+  - collection: blood_bank
+    field: type
+    type: string
+    meta:
+      collection: blood_bank
+      conditions: null
+      display: formatted-value
+      display_options:
+        border: true
+        color: '#E35169'
+        conditionalFormatting:
+          - operator: contains
+            value: Plasma
+            icon: science
+            color: '#FFC23B'
+          - operator: contains
+            value: Platelets
+            icon: healing
+            color: '#B56203'
+          - operator: contains
+            value: Red Cells
+            color: '#FF002B'
+            background: null
+            icon: ecg_heart
+        icon: water_drop
+      field: type
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: Full Blood
+            value: Full Blood
+          - text: Plasma
+            value: Plasma
+          - text: Red Cells
+            value: Red Cells
+          - text: Platelets
+            value: Platelets
+      readonly: false
+      required: true
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: type
+      table: blood_bank
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: blood_bank
+    field: user_created
+    type: uuid
+    meta:
+      collection: blood_bank
+      conditions: null
+      display: user
+      display_options: null
+      field: user_created
+      group: null
+      hidden: true
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        template: '{{avatar.$thumbnail}} {{first_name}} {{last_name}}'
+      readonly: true
+      required: false
+      sort: 2
+      special:
+        - user-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: user_created
+      table: blood_bank
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_users
+      foreign_key_column: id
+  - collection: contact_us
+    field: date_created
+    type: timestamp
+    meta:
+      collection: contact_us
+      conditions: null
+      display: datetime
+      display_options:
+        relative: true
+      field: date_created
+      group: null
+      hidden: false
+      interface: datetime
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 2
+      special:
+        - date-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: date_created
+      table: contact_us
+      data_type: timestamp with time zone
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: contact_us
+    field: email
+    type: string
+    meta:
+      collection: contact_us
+      conditions: null
+      display: null
+      display_options: null
+      field: email
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: email
+      table: contact_us
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: contact_us
+    field: first_name
+    type: string
+    meta:
+      collection: contact_us
+      conditions: null
+      display: null
+      display_options: null
+      field: first_name
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: first_name
+      table: contact_us
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: contact_us
+    field: id
+    type: integer
+    meta:
+      collection: contact_us
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: contact_us
+      data_type: integer
+      default_value: nextval('contact_us_id_seq'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: contact_us
+    field: last_name
+    type: string
+    meta:
+      collection: contact_us
+      conditions: null
+      display: null
+      display_options: null
+      field: last_name
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: last_name
+      table: contact_us
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: contact_us
+    field: message
+    type: text
+    meta:
+      collection: contact_us
+      conditions: null
+      display: null
+      display_options: null
+      field: message
+      group: null
+      hidden: false
+      interface: input-multiline
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 8
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: message
+      table: contact_us
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: contact_us
+    field: phone
+    type: string
+    meta:
+      collection: contact_us
+      conditions: null
+      display: formatted-value
+      display_options:
+        bold: true
+        border: true
+        color: '#A2B5CD'
+        icon: phone_android
+      field: phone
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options:
+        iconLeft: phone_in_talk
+        trim: true
+      readonly: true
+      required: false
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: phone
+      table: contact_us
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: contact_us
+    field: processed
+    type: boolean
+    meta:
+      collection: contact_us
+      conditions: null
+      display: null
+      display_options: null
+      field: processed
+      group: null
+      hidden: false
+      interface: boolean
+      note: null
+      options:
+        colorOff: '#FFC23B'
+        colorOn: '#2ECDA7'
+      readonly: false
+      required: true
+      sort: 7
+      special:
+        - cast-boolean
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: processed
+      table: contact_us
+      data_type: boolean
+      default_value: false
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: donors
+    field: ABO
+    type: string
+    meta:
+      collection: donors
+      conditions: null
+      display: formatted-value
+      display_options:
+        border: true
+        color: '#2ECDA7'
+        conditionalFormatting:
+          - operator: contains
+            value: '-'
+            color: '#E35169'
+      field: ABO
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: A+
+            value: A+
+          - text: B+
+            value: B+
+          - text: O+
+            value: O+
+          - text: AB+
+            value: AB+
+          - text: A-
+            value: A-
+          - text: B-
+            value: B-
+          - text: O-
+            value: O-
+          - text: AB-
+            value: AB-
+      readonly: false
+      required: true
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: ABO
+      table: donors
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: donors
+    field: Email
+    type: boolean
+    meta:
+      collection: donors
+      conditions: null
+      display: null
+      display_options: null
+      field: Email
+      group: contact
+      hidden: false
+      interface: boolean
+      note: null
+      options:
+        colorOn: '#2ECDA7'
+      readonly: false
+      required: false
+      sort: 1
+      special:
+        - cast-boolean
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: Email
+      table: donors
+      data_type: boolean
+      default_value: true
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: donors
+    field: Phone
+    type: boolean
+    meta:
+      collection: donors
+      conditions: null
+      display: null
+      display_options: null
+      field: Phone
+      group: contact
+      hidden: false
+      interface: boolean
+      note: null
+      options:
+        colorOn: '#2ECDA7'
+      readonly: false
+      required: false
+      sort: 2
+      special:
+        - cast-boolean
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: Phone
+      table: donors
+      data_type: boolean
+      default_value: true
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: donors
+    field: SMS
+    type: boolean
+    meta:
+      collection: donors
+      conditions: null
+      display: null
+      display_options: null
+      field: SMS
+      group: contact
+      hidden: false
+      interface: boolean
+      note: null
+      options:
+        colorOn: '#2ECDA7'
+      readonly: false
+      required: false
+      sort: 3
+      special:
+        - cast-boolean
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: SMS
+      table: donors
+      data_type: boolean
+      default_value: true
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: donors
+    field: account_id
+    type: uuid
+    meta:
+      collection: donors
+      conditions: []
+      display: null
+      display_options: null
+      field: account_id
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        enableCreate: true
+        enableSelect: true
+        filter: null
+      readonly: false
+      required: false
+      sort: 15
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: account_id
+      table: donors
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: true
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_users
+      foreign_key_column: id
+  - collection: donors
+    field: available
+    type: boolean
+    meta:
+      collection: donors
+      conditions: null
+      display: null
+      display_options: null
+      field: available
+      group: null
+      hidden: false
+      interface: boolean
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 11
+      special:
+        - cast-boolean
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: available
+      table: donors
+      data_type: boolean
+      default_value: true
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: donors
+    field: contact
+    type: alias
+    meta:
+      collection: donors
+      conditions: null
+      display: null
+      display_options: null
+      field: contact
+      group: null
+      hidden: false
+      interface: group-detail
+      note: null
+      options:
+        headerColor: '#FFC23B'
+        headerIcon: contact_emergency
+      readonly: false
+      required: false
+      sort: 13
+      special:
+        - alias
+        - group
+        - no-data
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+  - collection: donors
+    field: date_created
+    type: timestamp
+    meta:
+      collection: donors
+      conditions: null
+      display: datetime
+      display_options:
+        relative: true
+      field: date_created
+      group: null
+      hidden: true
+      interface: datetime
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 17
+      special:
+        - date-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: date_created
+      table: donors
+      data_type: timestamp with time zone
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: donors
+    field: date_of_birth
+    type: date
+    meta:
+      collection: donors
+      conditions: null
+      display: null
+      display_options: null
+      field: date_of_birth
+      group: null
+      hidden: false
+      interface: datetime
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: date_of_birth
+      table: donors
+      data_type: date
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: donors
+    field: documents
+    type: alias
+    meta:
+      collection: donors
+      conditions: null
+      display: null
+      display_options: null
+      field: documents
+      group: null
+      hidden: false
+      interface: files
+      note: null
+      options:
+        enableCreate: true
+        folder: 08cefc97-6165-49de-a3e3-ea0babd644eb
+      readonly: false
+      required: false
+      sort: 14
+      special:
+        - files
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+  - collection: donors
+    field: email
+    type: string
+    meta:
+      collection: donors
+      conditions: null
+      display: null
+      display_options: null
+      field: email
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 9
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: email
+      table: donors
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: donors
+    field: first_name
+    type: string
+    meta:
+      collection: donors
+      conditions: null
+      display: null
+      display_options: null
+      field: first_name
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: first_name
+      table: donors
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: donors
+    field: id
+    type: integer
+    meta:
+      collection: donors
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: donors
+      data_type: integer
+      default_value: nextval('donors_id_seq'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: donors
+    field: last_name
+    type: string
+    meta:
+      collection: donors
+      conditions: null
+      display: null
+      display_options: null
+      field: last_name
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: last_name
+      table: donors
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: donors
+    field: note
+    type: text
+    meta:
+      collection: donors
+      conditions: null
+      display: null
+      display_options: null
+      field: note
+      group: null
+      hidden: false
+      interface: input-multiline
+      note: null
+      options:
+        placeholder: antcd ... etc
+      readonly: false
+      required: false
+      sort: 12
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: note
+      table: donors
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: donors
+    field: phone
+    type: string
+    meta:
+      collection: donors
+      conditions: null
+      display: formatted-value
+      display_options:
+        bold: true
+        border: true
+        color: '#A2B5CD'
+        icon: phone_android
+      field: phone
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options:
+        iconLeft: phone_in_talk
+        trim: true
+      readonly: false
+      required: false
+      sort: 8
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: phone
+      table: donors
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: true
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: donors
+    field: sex
+    type: string
+    meta:
+      collection: donors
+      conditions: []
+      display: formatted-value
+      display_options:
+        border: true
+        conditionalFormatting:
+          - operator: eq
+            value: male
+            color: '#47BEE6'
+            icon: male
+          - operator: eq
+            value: female
+            color: '#F093D3'
+            icon: female
+      field: sex
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: male
+            value: male
+          - text: female
+            value: female
+      readonly: false
+      required: true
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: sex
+      table: donors
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: donors
+    field: status
+    type: string
+    meta:
+      collection: donors
+      conditions: null
+      display: formatted-value
+      display_options:
+        border: true
+        conditionalFormatting:
+          - operator: eq
+            value: approved
+            color: '#2ECDA7'
+            icon: order_approve
+          - operator: eq
+            value: denied
+            color: '#E35169'
+            icon: close
+          - operator: eq
+            value: pending
+            color: '#FFC23B'
+            background: null
+            icon: nest_clock_farsight_analog
+      field: status
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: approved
+            value: approved
+          - text: denied
+            value: denied
+          - text: pending
+            value: pending
+      readonly: false
+      required: false
+      sort: 10
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: status
+      table: donors
+      data_type: character varying
+      default_value: approved
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: donors
+    field: user_created
+    type: uuid
+    meta:
+      collection: donors
+      conditions: null
+      display: user
+      display_options: null
+      field: user_created
+      group: null
+      hidden: true
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        template: '{{avatar.$thumbnail}} {{first_name}} {{last_name}}'
+      readonly: true
+      required: false
+      sort: 16
+      special:
+        - user-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: user_created
+      table: donors
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_users
+      foreign_key_column: id
+  - collection: donors
+    field: wilaya
+    type: string
+    meta:
+      collection: donors
+      conditions: null
+      display: raw
+      display_options:
+        border: false
+        choices: null
+      field: wilaya
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: 01 - أدرار
+            value: '1'
+          - text: 02 - الشلف
+            value: '2'
+          - text: 03 - الأغواط
+            value: '3'
+          - text: 04 - أم البواقي
+            value: '4'
+          - text: 05 - باتنة
+            value: '5'
+          - text: 06 - بجاية
+            value: '6'
+          - text: 07 - بسكرة
+            value: '7'
+          - text: 08 - بشار
+            value: '8'
+          - text: 09 - البليدة
+            value: '9'
+          - text: 10 - البويرة
+            value: '10'
+          - text: 11 - تمنراست
+            value: '11'
+          - text: 12 - تبسة
+            value: '12'
+          - text: 13 - تلمسان
+            value: '13'
+          - text: 14 - تيارت
+            value: '14'
+          - text: 15 - تيزي وزو
+            value: '15'
+          - text: 16 - الجزائر العاصمة
+            value: '16'
+          - text: 17 - الجلفة
+            value: '17'
+          - text: 18 - جيجل
+            value: '18'
+          - text: 19 - سطيف
+            value: '19'
+          - text: 20 - سعيدة
+            value: '20'
+          - text: 21 - سكيكدة
+            value: '21'
+          - text: 22 - سيدي بلعباس
+            value: '22'
+          - text: 23 - عنابة
+            value: '23'
+          - text: 24 - قالمة
+            value: '24'
+          - text: 25 - قسنطينة
+            value: '25'
+          - text: 26 - المدية
+            value: '26'
+          - text: 27 - مستغانم
+            value: '27'
+          - text: 28 - المسيلة
+            value: '28'
+          - text: 29 - معسكر
+            value: '29'
+          - text: 30 - ورقلة
+            value: '30'
+          - text: 31 - وهران
+            value: '31'
+          - text: 32 - البيض
+            value: '32'
+          - text: 34 - برج بوعريريج
+            value: '34'
+          - text: 35 - بومرداس
+            value: '35'
+          - text: 36 - الطارف
+            value: '36'
+          - text: 37 - تيندوف
+            value: '37'
+          - text: 38 - تيسمسيلت
+            value: '38'
+          - text: 39 - الوادي
+            value: '39'
+          - text: 40 - خنشلة
+            value: '40'
+          - text: 41 - سوق أهراس
+            value: '41'
+          - text: 42 - تيبازة
+            value: '42'
+          - text: 43 - ميلة
+            value: '43'
+          - text: 44 - عين الدفلى
+            value: '44'
+          - text: 45 - النعامة
+            value: '45'
+          - text: 46 - عين تموشنت
+            value: '46'
+          - text: 47 - غرداية
+            value: '47'
+          - text: 48 - غليزان
+            value: '48'
+          - text: 49 - تيميمون
+            value: '49'
+          - text: 50 - برج باجي مختار
+            value: '50'
+      readonly: false
+      required: true
+      sort: 7
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: wilaya
+      table: donors
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: donors_files
+    field: directus_files_id
+    type: uuid
+    meta:
+      collection: donors_files
+      conditions: null
+      display: null
+      display_options: null
+      field: directus_files_id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: directus_files_id
+      table: donors_files
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_files
+      foreign_key_column: id
+  - collection: donors_files
+    field: donors_id
+    type: integer
+    meta:
+      collection: donors_files
+      conditions: null
+      display: null
+      display_options: null
+      field: donors_id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: donors_id
+      table: donors_files
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: donors
+      foreign_key_column: id
+  - collection: donors_files
+    field: id
+    type: integer
+    meta:
+      collection: donors_files
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: donors_files
+      data_type: integer
+      default_value: nextval('donors_files_id_seq'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: faq
+    field: answer
+    type: text
+    meta:
+      collection: faq
+      conditions: null
+      display: null
+      display_options: null
+      field: answer
+      group: null
+      hidden: false
+      interface: input-rich-text-html
+      note: null
+      options:
+        folder: 8c98d7ba-ebee-4959-bd92-46065e1ac42a
+        toolbar:
+          - aligncenter
+          - alignjustify
+          - alignleft
+          - alignnone
+          - alignright
+          - backcolor
+          - blockquote
+          - bold
+          - bullist
+          - code
+          - copy
+          - customImage
+          - customLink
+          - customMedia
+          - cut
+          - fontfamily
+          - fontsize
+          - forecolor
+          - fullscreen
+          - h1
+          - h2
+          - h3
+          - h4
+          - h5
+          - h6
+          - hr
+          - indent
+          - italic
+          - ltr rtl
+          - numlist
+          - outdent
+          - paste
+          - redo
+          - remove
+          - removeformat
+          - selectall
+          - strikethrough
+          - subscript
+          - superscript
+          - table
+          - underline
+          - undo
+          - unlink
+          - visualaid
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: answer
+      table: faq
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: faq
+    field: date_created
+    type: timestamp
+    meta:
+      collection: faq
+      conditions: null
+      display: datetime
+      display_options:
+        relative: true
+      field: date_created
+      group: null
+      hidden: true
+      interface: datetime
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: null
+      special:
+        - date-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: date_created
+      table: faq
+      data_type: timestamp with time zone
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: faq
+    field: id
+    type: integer
+    meta:
+      collection: faq
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: faq
+      data_type: integer
+      default_value: nextval('faq_id_seq'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: faq
+    field: question
+    type: string
+    meta:
+      collection: faq
+      conditions: null
+      display: null
+      display_options: null
+      field: question
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: question
+      table: faq
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: global
+    field: allow_new_users
+    type: boolean
+    meta:
+      collection: global
+      conditions: null
+      display: null
+      display_options: null
+      field: allow_new_users
+      group: null
+      hidden: false
+      interface: boolean
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: null
+      special:
+        - cast-boolean
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: allow_new_users
+      table: global
+      data_type: boolean
+      default_value: true
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: global
+    field: id
+    type: integer
+    meta:
+      collection: global
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: global
+      data_type: integer
+      default_value: nextval('global_id_seq'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: global
+    field: maintenance
+    type: boolean
+    meta:
+      collection: global
+      conditions: null
+      display: boolean
+      display_options:
+        colorOff: '#2ECDA7'
+        colorOn: '#E35169'
+        iconOff: online_prediction
+        iconOn: settings_suggest
+        labelOff: online
+        labelOn: maintenance
+      field: maintenance
+      group: null
+      hidden: false
+      interface: boolean
+      note: null
+      options:
+        colorOff: '#2ECDA7'
+        colorOn: '#E35169'
+        label: Maintenance
+      readonly: false
+      required: false
+      sort: null
+      special:
+        - cast-boolean
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: maintenance
+      table: global
+      data_type: boolean
+      default_value: false
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: hospitals
+    field: id
+    type: integer
+    meta:
+      collection: hospitals
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: hospitals
+      data_type: integer
+      default_value: nextval('hospitals_id_seq'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: hospitals
+    field: location
+    type: geometry.Point
+    meta:
+      collection: hospitals
+      conditions: null
+      display: null
+      display_options: null
+      field: location
+      group: null
+      hidden: false
+      interface: map
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: location
+      table: hospitals
+      data_type: POINT
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: hospitals
+    field: name
+    type: string
+    meta:
+      collection: hospitals
+      conditions: null
+      display: labels
+      display_options:
+        format: false
+      field: name
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: name
+      table: hospitals
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: hospitals
+    field: phone
+    type: string
+    meta:
+      collection: hospitals
+      conditions: null
+      display: formatted-value
+      display_options:
+        bold: true
+        border: true
+        color: '#A2B5CD'
+        icon: phone_android
+      field: phone
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options:
+        iconLeft: phone_in_talk
+        trim: true
+      readonly: false
+      required: false
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: phone
+      table: hospitals
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: true
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: hospitals
+    field: type
+    type: string
+    meta:
+      collection: hospitals
+      conditions: null
+      display: formatted-value
+      display_options:
+        bold: true
+        border: false
+        icon: local_hospital
+      field: type
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: CHU
+            value: CHU
+          - text: EPH
+            value: EPH
+          - text: EHS
+            value: EHS
+          - text: EPSP
+            value: EPSP
+      readonly: false
+      required: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: type
+      table: hospitals
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: hospitals
+    field: wilaya
+    type: string
+    meta:
+      collection: hospitals
+      conditions: null
+      display: raw
+      display_options:
+        border: false
+        choices: null
+      field: wilaya
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: 01 - أدرار
+            value: '1'
+          - text: 02 - الشلف
+            value: '2'
+          - text: 03 - الأغواط
+            value: '3'
+          - text: 04 - أم البواقي
+            value: '4'
+          - text: 05 - باتنة
+            value: '5'
+          - text: 06 - بجاية
+            value: '6'
+          - text: 07 - بسكرة
+            value: '7'
+          - text: 08 - بشار
+            value: '8'
+          - text: 09 - البليدة
+            value: '9'
+          - text: 10 - البويرة
+            value: '10'
+          - text: 11 - تمنراست
+            value: '11'
+          - text: 12 - تبسة
+            value: '12'
+          - text: 13 - تلمسان
+            value: '13'
+          - text: 14 - تيارت
+            value: '14'
+          - text: 15 - تيزي وزو
+            value: '15'
+          - text: 16 - الجزائر العاصمة
+            value: '16'
+          - text: 17 - الجلفة
+            value: '17'
+          - text: 18 - جيجل
+            value: '18'
+          - text: 19 - سطيف
+            value: '19'
+          - text: 20 - سعيدة
+            value: '20'
+          - text: 21 - سكيكدة
+            value: '21'
+          - text: 22 - سيدي بلعباس
+            value: '22'
+          - text: 23 - عنابة
+            value: '23'
+          - text: 24 - قالمة
+            value: '24'
+          - text: 25 - قسنطينة
+            value: '25'
+          - text: 26 - المدية
+            value: '26'
+          - text: 27 - مستغانم
+            value: '27'
+          - text: 28 - المسيلة
+            value: '28'
+          - text: 29 - معسكر
+            value: '29'
+          - text: 30 - ورقلة
+            value: '30'
+          - text: 31 - وهران
+            value: '31'
+          - text: 32 - البيض
+            value: '32'
+          - text: 34 - برج بوعريريج
+            value: '34'
+          - text: 35 - بومرداس
+            value: '35'
+          - text: 36 - الطارف
+            value: '36'
+          - text: 37 - تيندوف
+            value: '37'
+          - text: 38 - تيسمسيلت
+            value: '38'
+          - text: 39 - الوادي
+            value: '39'
+          - text: 40 - خنشلة
+            value: '40'
+          - text: 41 - سوق أهراس
+            value: '41'
+          - text: 42 - تيبازة
+            value: '42'
+          - text: 43 - ميلة
+            value: '43'
+          - text: 44 - عين الدفلى
+            value: '44'
+          - text: 45 - النعامة
+            value: '45'
+          - text: 46 - عين تموشنت
+            value: '46'
+          - text: 47 - غرداية
+            value: '47'
+          - text: 48 - غليزان
+            value: '48'
+          - text: 49 - تيميمون
+            value: '49'
+          - text: 50 - برج باجي مختار
+            value: '50'
+      readonly: false
+      required: true
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: wilaya
+      table: hospitals
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: need_blood
+    field: abo
+    type: string
+    meta:
+      collection: need_blood
+      conditions: null
+      display: formatted-value
+      display_options:
+        border: true
+        color: '#2ECDA7'
+        conditionalFormatting:
+          - operator: contains
+            value: '-'
+            color: '#E35169'
+      field: abo
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: A+
+            value: A+
+          - text: B+
+            value: B+
+          - text: O+
+            value: O+
+          - text: AB+
+            value: AB+
+          - text: A-
+            value: A-
+          - text: B-
+            value: B-
+          - text: O-
+            value: O-
+          - text: AB-
+            value: AB-
+      readonly: true
+      required: true
+      sort: 9
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: abo
+      table: need_blood
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: need_blood
+    field: date_created
+    type: timestamp
+    meta:
+      collection: need_blood
+      conditions: null
+      display: datetime
+      display_options:
+        relative: true
+      field: date_created
+      group: null
+      hidden: false
+      interface: datetime
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 2
+      special:
+        - date-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: date_created
+      table: need_blood
+      data_type: timestamp with time zone
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: need_blood
+    field: email
+    type: string
+    meta:
+      collection: need_blood
+      conditions: null
+      display: null
+      display_options: null
+      field: email
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: email
+      table: need_blood
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: need_blood
+    field: first_name
+    type: string
+    meta:
+      collection: need_blood
+      conditions: null
+      display: null
+      display_options: null
+      field: first_name
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: first_name
+      table: need_blood
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: need_blood
+    field: id
+    type: integer
+    meta:
+      collection: need_blood
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: need_blood
+      data_type: integer
+      default_value: nextval('need_blood_id_seq'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: need_blood
+    field: last_name
+    type: string
+    meta:
+      collection: need_blood
+      conditions: null
+      display: null
+      display_options: null
+      field: last_name
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: last_name
+      table: need_blood
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: need_blood
+    field: phone
+    type: string
+    meta:
+      collection: need_blood
+      conditions: null
+      display: formatted-value
+      display_options:
+        bold: true
+        border: true
+        color: '#A2B5CD'
+        icon: phone_android
+      field: phone
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options:
+        iconLeft: phone_in_talk
+        trim: true
+      readonly: true
+      required: false
+      sort: 7
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: phone
+      table: need_blood
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: need_blood
+    field: processed
+    type: boolean
+    meta:
+      collection: need_blood
+      conditions: null
+      display: null
+      display_options: null
+      field: processed
+      group: null
+      hidden: false
+      interface: boolean
+      note: null
+      options:
+        colorOff: '#FFC23B'
+        colorOn: '#2ECDA7'
+      readonly: false
+      required: true
+      sort: 3
+      special:
+        - cast-boolean
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: processed
+      table: need_blood
+      data_type: boolean
+      default_value: false
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: need_blood
+    field: wilaya
+    type: string
+    meta:
+      collection: need_blood
+      conditions: null
+      display: raw
+      display_options:
+        border: false
+        choices: null
+      field: wilaya
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: 01 - أدرار
+            value: '1'
+          - text: 02 - الشلف
+            value: '2'
+          - text: 03 - الأغواط
+            value: '3'
+          - text: 04 - أم البواقي
+            value: '4'
+          - text: 05 - باتنة
+            value: '5'
+          - text: 06 - بجاية
+            value: '6'
+          - text: 07 - بسكرة
+            value: '7'
+          - text: 08 - بشار
+            value: '8'
+          - text: 09 - البليدة
+            value: '9'
+          - text: 10 - البويرة
+            value: '10'
+          - text: 11 - تمنراست
+            value: '11'
+          - text: 12 - تبسة
+            value: '12'
+          - text: 13 - تلمسان
+            value: '13'
+          - text: 14 - تيارت
+            value: '14'
+          - text: 15 - تيزي وزو
+            value: '15'
+          - text: 16 - الجزائر العاصمة
+            value: '16'
+          - text: 17 - الجلفة
+            value: '17'
+          - text: 18 - جيجل
+            value: '18'
+          - text: 19 - سطيف
+            value: '19'
+          - text: 20 - سعيدة
+            value: '20'
+          - text: 21 - سكيكدة
+            value: '21'
+          - text: 22 - سيدي بلعباس
+            value: '22'
+          - text: 23 - عنابة
+            value: '23'
+          - text: 24 - قالمة
+            value: '24'
+          - text: 25 - قسنطينة
+            value: '25'
+          - text: 26 - المدية
+            value: '26'
+          - text: 27 - مستغانم
+            value: '27'
+          - text: 28 - المسيلة
+            value: '28'
+          - text: 29 - معسكر
+            value: '29'
+          - text: 30 - ورقلة
+            value: '30'
+          - text: 31 - وهران
+            value: '31'
+          - text: 32 - البيض
+            value: '32'
+          - text: 34 - برج بوعريريج
+            value: '34'
+          - text: 35 - بومرداس
+            value: '35'
+          - text: 36 - الطارف
+            value: '36'
+          - text: 37 - تيندوف
+            value: '37'
+          - text: 38 - تيسمسيلت
+            value: '38'
+          - text: 39 - الوادي
+            value: '39'
+          - text: 40 - خنشلة
+            value: '40'
+          - text: 41 - سوق أهراس
+            value: '41'
+          - text: 42 - تيبازة
+            value: '42'
+          - text: 43 - ميلة
+            value: '43'
+          - text: 44 - عين الدفلى
+            value: '44'
+          - text: 45 - النعامة
+            value: '45'
+          - text: 46 - عين تموشنت
+            value: '46'
+          - text: 47 - غرداية
+            value: '47'
+          - text: 48 - غليزان
+            value: '48'
+          - text: 49 - تيميمون
+            value: '49'
+          - text: 50 - برج باجي مختار
+            value: '50'
+      readonly: true
+      required: true
+      sort: 8
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: wilaya
+      table: need_blood
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: news
+    field: date_created
+    type: timestamp
+    meta:
+      collection: news
+      conditions: null
+      display: datetime
+      display_options:
+        relative: true
+      field: date_created
+      group: null
+      hidden: true
+      interface: datetime
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 2
+      special:
+        - date-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: date_created
+      table: news
+      data_type: timestamp with time zone
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: news
+    field: id
+    type: integer
+    meta:
+      collection: news
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: news
+      data_type: integer
+      default_value: nextval('news_id_seq'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: news
+    field: image
+    type: uuid
+    meta:
+      collection: news
+      conditions: null
+      display: null
+      display_options: null
+      field: image
+      group: null
+      hidden: false
+      interface: file-image
+      note: null
+      options:
+        folder: 8c98d7ba-ebee-4959-bd92-46065e1ac42a
+      readonly: false
+      required: false
+      sort: 7
+      special:
+        - file
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: image
+      table: news
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_files
+      foreign_key_column: id
+  - collection: news
+    field: info
+    type: text
+    meta:
+      collection: news
+      conditions: null
+      display: null
+      display_options: null
+      field: info
+      group: null
+      hidden: false
+      interface: input-rich-text-html
+      note: null
+      options:
+        folder: 8c98d7ba-ebee-4959-bd92-46065e1ac42a
+        toolbar:
+          - aligncenter
+          - alignjustify
+          - alignleft
+          - alignnone
+          - alignright
+          - backcolor
+          - blockquote
+          - bold
+          - bullist
+          - code
+          - copy
+          - customImage
+          - customLink
+          - customMedia
+          - cut
+          - fontfamily
+          - fontsize
+          - forecolor
+          - fullscreen
+          - h1
+          - h2
+          - h3
+          - h4
+          - h5
+          - h6
+          - hr
+          - indent
+          - italic
+          - ltr rtl
+          - numlist
+          - outdent
+          - paste
+          - redo
+          - remove
+          - removeformat
+          - selectall
+          - strikethrough
+          - subscript
+          - superscript
+          - table
+          - underline
+          - undo
+          - unlink
+          - visualaid
+      readonly: false
+      required: false
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: info
+      table: news
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: news
+    field: published
+    type: boolean
+    meta:
+      collection: news
+      conditions: null
+      display: null
+      display_options: null
+      field: published
+      group: null
+      hidden: false
+      interface: boolean
+      note: null
+      options:
+        colorOff: '#E35169'
+        colorOn: '#2ECDA7'
+      readonly: false
+      required: true
+      sort: 3
+      special:
+        - cast-boolean
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: published
+      table: news
+      data_type: boolean
+      default_value: false
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: news
+    field: short_desc
+    type: text
+    meta:
+      collection: news
+      conditions: null
+      display: null
+      display_options: null
+      field: short_desc
+      group: null
+      hidden: false
+      interface: input-multiline
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: short_desc
+      table: news
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: news
+    field: title
+    type: string
+    meta:
+      collection: news
+      conditions: null
+      display: null
+      display_options: null
+      field: title
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: title
+      table: news
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: patients
+    field: ABO
+    type: string
+    meta:
+      collection: patients
+      conditions: null
+      display: formatted-value
+      display_options:
+        border: true
+        color: '#2ECDA7'
+        conditionalFormatting:
+          - operator: contains
+            value: '-'
+            color: '#E35169'
+      field: ABO
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: A+
+            value: A+
+          - text: B+
+            value: B+
+          - text: O+
+            value: O+
+          - text: AB+
+            value: AB+
+          - text: A-
+            value: A-
+          - text: B-
+            value: B-
+          - text: O-
+            value: O-
+          - text: AB-
+            value: AB-
+      readonly: false
+      required: true
+      sort: 9
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: ABO
+      table: patients
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: patients
+    field: date_created
+    type: timestamp
+    meta:
+      collection: patients
+      conditions: null
+      display: datetime
+      display_options:
+        relative: true
+      field: date_created
+      group: null
+      hidden: true
+      interface: datetime
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 3
+      special:
+        - date-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: date_created
+      table: patients
+      data_type: timestamp with time zone
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: patients
+    field: date_of_birth
+    type: date
+    meta:
+      collection: patients
+      conditions: null
+      display: null
+      display_options: null
+      field: date_of_birth
+      group: null
+      hidden: false
+      interface: datetime
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: date_of_birth
+      table: patients
+      data_type: date
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: patients
+    field: documents
+    type: alias
+    meta:
+      collection: patients
+      conditions: null
+      display: null
+      display_options: null
+      field: documents
+      group: null
+      hidden: false
+      interface: files
+      note: null
+      options:
+        folder: 16b0560c-7135-4256-a9d8-1ddf280bc4ac
+      readonly: false
+      required: false
+      sort: 12
+      special:
+        - files
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+  - collection: patients
+    field: first_name
+    type: string
+    meta:
+      collection: patients
+      conditions: null
+      display: null
+      display_options: null
+      field: first_name
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: first_name
+      table: patients
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: patients
+    field: id
+    type: integer
+    meta:
+      collection: patients
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: patients
+      data_type: integer
+      default_value: nextval('patients_id_seq'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: patients
+    field: last_name
+    type: string
+    meta:
+      collection: patients
+      conditions: null
+      display: null
+      display_options: null
+      field: last_name
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: last_name
+      table: patients
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: patients
+    field: note
+    type: text
+    meta:
+      collection: patients
+      conditions: null
+      display: null
+      display_options: null
+      field: note
+      group: null
+      hidden: false
+      interface: input-multiline
+      note: null
+      options:
+        placeholder: antcd ... etc
+      readonly: false
+      required: false
+      sort: 11
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: note
+      table: patients
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: patients
+    field: phone
+    type: string
+    meta:
+      collection: patients
+      conditions: null
+      display: formatted-value
+      display_options:
+        bold: true
+        border: true
+        color: '#A2B5CD'
+        icon: phone_android
+      field: phone
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options:
+        iconLeft: phone_in_talk
+        trim: true
+      readonly: false
+      required: false
+      sort: 8
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: phone
+      table: patients
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: true
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: patients
+    field: sex
+    type: string
+    meta:
+      collection: patients
+      conditions: []
+      display: formatted-value
+      display_options:
+        border: true
+        conditionalFormatting:
+          - operator: eq
+            value: male
+            color: '#47BEE6'
+            icon: male
+          - operator: eq
+            value: female
+            color: '#F093D3'
+            icon: female
+      field: sex
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: male
+            value: male
+          - text: female
+            value: female
+      readonly: false
+      required: true
+      sort: 7
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: sex
+      table: patients
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: patients
+    field: user_created
+    type: uuid
+    meta:
+      collection: patients
+      conditions: null
+      display: user
+      display_options: null
+      field: user_created
+      group: null
+      hidden: true
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        template: '{{avatar.$thumbnail}} {{first_name}} {{last_name}}'
+      readonly: true
+      required: false
+      sort: 2
+      special:
+        - user-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: user_created
+      table: patients
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_users
+      foreign_key_column: id
+  - collection: patients
+    field: wilaya
+    type: string
+    meta:
+      collection: patients
+      conditions: null
+      display: raw
+      display_options:
+        border: false
+        choices: null
+      field: wilaya
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: 01 - أدرار
+            value: '1'
+          - text: 02 - الشلف
+            value: '2'
+          - text: 03 - الأغواط
+            value: '3'
+          - text: 04 - أم البواقي
+            value: '4'
+          - text: 05 - باتنة
+            value: '5'
+          - text: 06 - بجاية
+            value: '6'
+          - text: 07 - بسكرة
+            value: '7'
+          - text: 08 - بشار
+            value: '8'
+          - text: 09 - البليدة
+            value: '9'
+          - text: 10 - البويرة
+            value: '10'
+          - text: 11 - تمنراست
+            value: '11'
+          - text: 12 - تبسة
+            value: '12'
+          - text: 13 - تلمسان
+            value: '13'
+          - text: 14 - تيارت
+            value: '14'
+          - text: 15 - تيزي وزو
+            value: '15'
+          - text: 16 - الجزائر العاصمة
+            value: '16'
+          - text: 17 - الجلفة
+            value: '17'
+          - text: 18 - جيجل
+            value: '18'
+          - text: 19 - سطيف
+            value: '19'
+          - text: 20 - سعيدة
+            value: '20'
+          - text: 21 - سكيكدة
+            value: '21'
+          - text: 22 - سيدي بلعباس
+            value: '22'
+          - text: 23 - عنابة
+            value: '23'
+          - text: 24 - قالمة
+            value: '24'
+          - text: 25 - قسنطينة
+            value: '25'
+          - text: 26 - المدية
+            value: '26'
+          - text: 27 - مستغانم
+            value: '27'
+          - text: 28 - المسيلة
+            value: '28'
+          - text: 29 - معسكر
+            value: '29'
+          - text: 30 - ورقلة
+            value: '30'
+          - text: 31 - وهران
+            value: '31'
+          - text: 32 - البيض
+            value: '32'
+          - text: 34 - برج بوعريريج
+            value: '34'
+          - text: 35 - بومرداس
+            value: '35'
+          - text: 36 - الطارف
+            value: '36'
+          - text: 37 - تيندوف
+            value: '37'
+          - text: 38 - تيسمسيلت
+            value: '38'
+          - text: 39 - الوادي
+            value: '39'
+          - text: 40 - خنشلة
+            value: '40'
+          - text: 41 - سوق أهراس
+            value: '41'
+          - text: 42 - تيبازة
+            value: '42'
+          - text: 43 - ميلة
+            value: '43'
+          - text: 44 - عين الدفلى
+            value: '44'
+          - text: 45 - النعامة
+            value: '45'
+          - text: 46 - عين تموشنت
+            value: '46'
+          - text: 47 - غرداية
+            value: '47'
+          - text: 48 - غليزان
+            value: '48'
+          - text: 49 - تيميمون
+            value: '49'
+          - text: 50 - برج باجي مختار
+            value: '50'
+      readonly: false
+      required: true
+      sort: 10
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: wilaya
+      table: patients
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: patients_files
+    field: directus_files_id
+    type: uuid
+    meta:
+      collection: patients_files
+      conditions: null
+      display: null
+      display_options: null
+      field: directus_files_id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: directus_files_id
+      table: patients_files
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_files
+      foreign_key_column: id
+  - collection: patients_files
+    field: id
+    type: integer
+    meta:
+      collection: patients_files
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: patients_files
+      data_type: integer
+      default_value: nextval('patients_files_id_seq'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: patients_files
+    field: patients_id
+    type: integer
+    meta:
+      collection: patients_files
+      conditions: null
+      display: null
+      display_options: null
+      field: patients_id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: patients_id
+      table: patients_files
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: patients
+      foreign_key_column: id
+  - collection: transfusion
+    field: blood_banks
+    type: alias
+    meta:
+      collection: transfusion
+      conditions: null
+      display: related-values
+      display_options:
+        template: '{{id}} {{type}} {{abo}} {{Quantity}}'
+      field: blood_banks
+      group: null
+      hidden: false
+      interface: list-o2m
+      note: null
+      options:
+        enableLink: true
+        enableSelect: true
+        filter:
+          _and:
+            - available:
+                _eq: true
+        template: '{{id}} {{type}} {{abo}} {{Quantity}}'
+      readonly: false
+      required: false
+      sort: 6
+      special:
+        - o2m
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+  - collection: transfusion
+    field: date_created
+    type: timestamp
+    meta:
+      collection: transfusion
+      conditions: null
+      display: datetime
+      display_options:
+        relative: true
+      field: date_created
+      group: null
+      hidden: true
+      interface: datetime
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 3
+      special:
+        - date-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: date_created
+      table: transfusion
+      data_type: timestamp with time zone
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: transfusion
+    field: documents
+    type: alias
+    meta:
+      collection: transfusion
+      conditions: null
+      display: null
+      display_options: null
+      field: documents
+      group: null
+      hidden: false
+      interface: files
+      note: null
+      options:
+        enableCreate: true
+        enableSelect: true
+        folder: 8ea7231e-889c-4c09-a75d-11f3da22b591
+      readonly: false
+      required: false
+      sort: 7
+      special:
+        - files
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+  - collection: transfusion
+    field: id
+    type: integer
+    meta:
+      collection: transfusion
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: transfusion
+      data_type: integer
+      default_value: nextval('transfusion_id_seq'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: transfusion
+    field: note
+    type: text
+    meta:
+      collection: transfusion
+      conditions: null
+      display: null
+      display_options: null
+      field: note
+      group: null
+      hidden: false
+      interface: input-multiline
+      note: null
+      options:
+        placeholder: conduit / maladie ...
+      readonly: false
+      required: false
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: note
+      table: transfusion
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: transfusion
+    field: patient
+    type: integer
+    meta:
+      collection: transfusion
+      conditions: null
+      display: related-values
+      display_options:
+        template: '{{id}} {{first_name}} {{last_name}} ( {{ABO}} )'
+      field: patient
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        enableCreate: true
+        enableSelect: true
+        template: '{{id}} - {{first_name}} {{last_name}} ( {{ABO}} )'
+      readonly: false
+      required: true
+      sort: 4
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: patient
+      table: transfusion
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: patients
+      foreign_key_column: id
+  - collection: transfusion
+    field: user_created
+    type: uuid
+    meta:
+      collection: transfusion
+      conditions: null
+      display: user
+      display_options: null
+      field: user_created
+      group: null
+      hidden: true
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        template: '{{avatar.$thumbnail}} {{first_name}} {{last_name}}'
+      readonly: true
+      required: false
+      sort: 2
+      special:
+        - user-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: user_created
+      table: transfusion
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_users
+      foreign_key_column: id
+  - collection: transfusion_files
+    field: directus_files_id
+    type: uuid
+    meta:
+      collection: transfusion_files
+      conditions: null
+      display: null
+      display_options: null
+      field: directus_files_id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: directus_files_id
+      table: transfusion_files
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_files
+      foreign_key_column: id
+  - collection: transfusion_files
+    field: id
+    type: integer
+    meta:
+      collection: transfusion_files
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: transfusion_files
+      data_type: integer
+      default_value: nextval('transfusion_files_id_seq'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: transfusion_files
+    field: transfusion_id
+    type: integer
+    meta:
+      collection: transfusion_files
+      conditions: null
+      display: null
+      display_options: null
+      field: transfusion_id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: transfusion_id
+      table: transfusion_files
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: transfusion
+      foreign_key_column: id
+relations:
+  - collection: appointment
+    field: donor
+    related_collection: donors
+    meta:
+      junction_field: null
+      many_collection: appointment
+      many_field: donor
+      one_allowed_collections: null
+      one_collection: donors
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: appointment
+      column: donor
+      foreign_key_table: donors
+      foreign_key_column: id
+      constraint_name: appointment_donor_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: appointment
+    field: hospital
+    related_collection: hospitals
+    meta:
+      junction_field: null
+      many_collection: appointment
+      many_field: hospital
+      one_allowed_collections: null
+      one_collection: hospitals
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: appointment
+      column: hospital
+      foreign_key_table: hospitals
+      foreign_key_column: id
+      constraint_name: appointment_hospital_foreign
+      on_update: NO ACTION
+      on_delete: NO ACTION
+  - collection: appointment
+    field: user_created
+    related_collection: directus_users
+    meta:
+      junction_field: null
+      many_collection: appointment
+      many_field: user_created
+      one_allowed_collections: null
+      one_collection: directus_users
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: appointment
+      column: user_created
+      foreign_key_table: directus_users
+      foreign_key_column: id
+      constraint_name: appointment_user_created_foreign
+      on_update: NO ACTION
+      on_delete: NO ACTION
+  - collection: blood_bank
+    field: donor
+    related_collection: donors
+    meta:
+      junction_field: null
+      many_collection: blood_bank
+      many_field: donor
+      one_allowed_collections: null
+      one_collection: donors
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: blood_bank
+      column: donor
+      foreign_key_table: donors
+      foreign_key_column: id
+      constraint_name: blood_bank_donor_foreign
+      on_update: NO ACTION
+      on_delete: NO ACTION
+  - collection: blood_bank
+    field: hospital
+    related_collection: hospitals
+    meta:
+      junction_field: null
+      many_collection: blood_bank
+      many_field: hospital
+      one_allowed_collections: null
+      one_collection: hospitals
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: blood_bank
+      column: hospital
+      foreign_key_table: hospitals
+      foreign_key_column: id
+      constraint_name: blood_bank_hospital_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: blood_bank
+    field: transfusion
+    related_collection: transfusion
+    meta:
+      junction_field: null
+      many_collection: blood_bank
+      many_field: transfusion
+      one_allowed_collections: null
+      one_collection: transfusion
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: blood_banks
+      sort_field: null
+    schema:
+      table: blood_bank
+      column: transfusion
+      foreign_key_table: transfusion
+      foreign_key_column: id
+      constraint_name: blood_bank_transfusion_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: blood_bank
+    field: user_created
+    related_collection: directus_users
+    meta:
+      junction_field: null
+      many_collection: blood_bank
+      many_field: user_created
+      one_allowed_collections: null
+      one_collection: directus_users
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: blood_bank
+      column: user_created
+      foreign_key_table: directus_users
+      foreign_key_column: id
+      constraint_name: blood_bank_user_created_foreign
+      on_update: NO ACTION
+      on_delete: NO ACTION
+  - collection: donors
+    field: account_id
+    related_collection: directus_users
+    meta:
+      junction_field: null
+      many_collection: donors
+      many_field: account_id
+      one_allowed_collections: null
+      one_collection: directus_users
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: donors
+      column: account_id
+      foreign_key_table: directus_users
+      foreign_key_column: id
+      constraint_name: donors_account_id_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: donors
+    field: user_created
+    related_collection: directus_users
+    meta:
+      junction_field: null
+      many_collection: donors
+      many_field: user_created
+      one_allowed_collections: null
+      one_collection: directus_users
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: donors
+      column: user_created
+      foreign_key_table: directus_users
+      foreign_key_column: id
+      constraint_name: donors_user_created_foreign
+      on_update: NO ACTION
+      on_delete: RESTRICT
+  - collection: donors_files
+    field: directus_files_id
+    related_collection: directus_files
+    meta:
+      junction_field: donors_id
+      many_collection: donors_files
+      many_field: directus_files_id
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: donors_files
+      column: directus_files_id
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: donors_files_directus_files_id_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: donors_files
+    field: donors_id
+    related_collection: donors
+    meta:
+      junction_field: directus_files_id
+      many_collection: donors_files
+      many_field: donors_id
+      one_allowed_collections: null
+      one_collection: donors
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: documents
+      sort_field: null
+    schema:
+      table: donors_files
+      column: donors_id
+      foreign_key_table: donors
+      foreign_key_column: id
+      constraint_name: donors_files_donors_id_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: news
+    field: image
+    related_collection: directus_files
+    meta:
+      junction_field: null
+      many_collection: news
+      many_field: image
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: news
+      column: image
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: news_image_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: patients
+    field: user_created
+    related_collection: directus_users
+    meta:
+      junction_field: null
+      many_collection: patients
+      many_field: user_created
+      one_allowed_collections: null
+      one_collection: directus_users
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: patients
+      column: user_created
+      foreign_key_table: directus_users
+      foreign_key_column: id
+      constraint_name: patients_user_created_foreign
+      on_update: NO ACTION
+      on_delete: NO ACTION
+  - collection: patients_files
+    field: directus_files_id
+    related_collection: directus_files
+    meta:
+      junction_field: patients_id
+      many_collection: patients_files
+      many_field: directus_files_id
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: patients_files
+      column: directus_files_id
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: patients_files_directus_files_id_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: patients_files
+    field: patients_id
+    related_collection: patients
+    meta:
+      junction_field: directus_files_id
+      many_collection: patients_files
+      many_field: patients_id
+      one_allowed_collections: null
+      one_collection: patients
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: documents
+      sort_field: null
+    schema:
+      table: patients_files
+      column: patients_id
+      foreign_key_table: patients
+      foreign_key_column: id
+      constraint_name: patients_files_patients_id_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: transfusion
+    field: patient
+    related_collection: patients
+    meta:
+      junction_field: null
+      many_collection: transfusion
+      many_field: patient
+      one_allowed_collections: null
+      one_collection: patients
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: transfusion
+      column: patient
+      foreign_key_table: patients
+      foreign_key_column: id
+      constraint_name: transfusion_patient_foreign
+      on_update: NO ACTION
+      on_delete: NO ACTION
+  - collection: transfusion
+    field: user_created
+    related_collection: directus_users
+    meta:
+      junction_field: null
+      many_collection: transfusion
+      many_field: user_created
+      one_allowed_collections: null
+      one_collection: directus_users
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: transfusion
+      column: user_created
+      foreign_key_table: directus_users
+      foreign_key_column: id
+      constraint_name: transfusion_user_created_foreign
+      on_update: NO ACTION
+      on_delete: NO ACTION
+  - collection: transfusion_files
+    field: directus_files_id
+    related_collection: directus_files
+    meta:
+      junction_field: transfusion_id
+      many_collection: transfusion_files
+      many_field: directus_files_id
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: transfusion_files
+      column: directus_files_id
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: transfusion_files_directus_files_id_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: transfusion_files
+    field: transfusion_id
+    related_collection: transfusion
+    meta:
+      junction_field: directus_files_id
+      many_collection: transfusion_files
+      many_field: transfusion_id
+      one_allowed_collections: null
+      one_collection: transfusion
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: documents
+      sort_field: null
+    schema:
+      table: transfusion_files
+      column: transfusion_id
+      foreign_key_table: transfusion
+      foreign_key_column: id
+      constraint_name: transfusion_files_transfusion_id_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL

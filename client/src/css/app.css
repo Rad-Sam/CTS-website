@@ -1,0 +1,76 @@
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.4s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: 'Cairo', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #000;
+}
+
+.max-width-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.max-width-container-2 {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.v-error {
+  max-height: 50vh;
+  padding: 6px 12px;
+  overflow: auto;
+  color: #e35169;
+  font-family: var(--family-monospace);
+  background-color: #fceef0;
+  border-radius: 6px;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.17em;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 0.83em;
+  font-weight: bold;
+}
+
+h6 {
+  font-size: 0.67em;
+  font-weight: bold;
+}
+
+.page-spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
